@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "removeComments": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "outDir": "build/js",
+        "inlineSourceMap": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
