@@ -5,6 +5,10 @@ export interface User {
     last_name: string;
 }
 
+/**
+ * Only a mock of database!
+ * Just return sample data based on id
+ */
 export function getUser(id: string, callback: (user: User) => void) {
     // db.collection('users', function(error, users) {
     //     if(error) { console.error(error); return; }
@@ -13,5 +17,5 @@ export function getUser(id: string, callback: (user: User) => void) {
     //         callback(user);
     //     });
     // });
-    callback({_id: id, email: "", first_name: "", last_name: ""});
+    callback({_id: id, email: id+"@"+id+".de", first_name: "vor"+id, last_name: "nach"+id});
 }
