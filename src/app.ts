@@ -23,8 +23,11 @@ if (env === 'development') {
 app.get('/', routes.index);
 app.get('/users/:userid', routes.getUser);
 
-app.listen(3000, function(){
-    console.log("server listening on port %d in %s mode", 3000, app.settings.env);
+//use environment variable PORT if available, else use 3000 as default
+var port = process.env.PORT || 3000; 
+
+app.listen(port, function(){
+    console.log("express.ts started. Open http://localhost:%d/ (%s mode)", port, app.settings.env);
 });
 
 export var App = app;
